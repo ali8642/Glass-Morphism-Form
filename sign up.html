@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glass Morphism Register Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <form action="thanks.html">
+            <h2>Welcome, New User 😊</h2>
+            <div class="input-field">
+                <input type="text" required>
+                <label>Enter your name</label>
+            </div>
+
+            <div class="input-field">
+                <input type="text" required>
+                <label>Enter your email</label>
+            </div>
+
+            <div class="input-field">
+                <input type="password" id="password1" name="password" required>
+                <label>Enter your password</label>
+            </div>
+
+            <div class="input-field">
+                <input type="password" id="password2" name="password" required>
+                <label>Confirm password</label>
+            </div>
+
+            <div class="show-password">
+                <label>
+                    <input type="checkbox" onclick="togglePassword()"> Show Password
+                </label>
+            </div>
+
+            <div class="forget">
+                <label for="remember">
+                    <input type="checkbox" id="remember" required>
+                    <p>I agree to the <a href="T&C.txt" style="color: skyblue;" target="_blank">Terms
+                            and Conditions</a></p>
+                </label>
+            </div>
+            <button type="submit">Sign Up</button>
+            <div class="register">
+                <p>
+                    Already have an account?
+                    <a href="sign in.html" style="color: aqua;">Sign in</a>
+                </p>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        function togglePassword() {
+            var passwordField1 = document.getElementById("password1");
+            var passwordField2 = document.getElementById("password2");
+            var type = passwordField1.type === "password" ? "text" : "password";
+
+            passwordField1.type = type;
+            passwordField2.type = type;
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final Step</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <form action="sign in.html">
+
+            <h2>Reset your password</h2>
+
+            <div class="input-field">
+                <input type="number" required>
+                <label>Verify OTP</label>
+            </div>
+
+            <ul>
+                <li style="text-align: left; margin-top: 1vh; margin-bottom: 3vh;">Enter the OTP sent to your email</li>
+            </ul>
+
+            <div class="input-field">
+                <input type="password" id="password1" name="password" required>
+                <label>Enter your password</label>
+            </div>
+
+            <div class="input-field">
+                <input type="password" id="password2" name="password" required>
+                <label>Confirm password</label>
+            </div>
+
+            <div class="show-password">
+                <label>
+                    <input type="checkbox" onclick="togglePassword()"> Show Password
+                </label>
+            </div>
+
+            <button type="submit" style="margin-top: 8vh;">Verify</button>
+
+            <script>
+                function togglePassword() {
+                    var passwordField1 = document.getElementById("password1");
+                    var passwordField2 = document.getElementById("password2");
+                    var type = passwordField1.type === "password" ? "text" : "password";
+        
+                    passwordField1.type = type;
+                    passwordField2.type = type;
+                }
+            </script>
+        
+        </form>
+    </div>
+    
+</body>
+
+</html>
